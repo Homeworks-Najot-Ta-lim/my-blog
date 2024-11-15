@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+* {
+  font-family: "Poppins", serif;
+}
+
+body {
+  border: 1px solid black;
+  background-color: #F1F1F1;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+header h1 {
+  font-weight: 550;
+}
+header p {
+  font-size: 15px;
+}
+header p span {
+  padding: 3px 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.main-container {
+  display: grid;
+  margin-top: 50px;
+  width: 95%;
+  place-self: center;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 50px;
+}
+.main-container main {
+  grid-column: 1/9;
+}
+@media only screen and (max-width: 480px) {
+  .main-container main {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .main-container main {
+    grid-column: 1/-1;
+  }
+}
+.main-container main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1px;
+  margin-bottom: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.main-container main section .image {
+  width: 100%;
+  object-fit: cover;
+}
+.main-container main section .image img {
+  width: 100%;
+  height: 100%;
+}
+.main-container main section .card-body {
+  padding: 3px 5px;
+}
+.main-container main section .card-body h2 {
+  font-weight: 400;
+}
+.main-container main section .card-body h5 {
+  font-size: 18px;
+  font-weight: 300;
+}
+.main-container main section .card-body h5 span {
+  color: #8e8585;
+}
+.main-container main section .card-body p {
+  font-size: 14px;
+  font-weight: 300;
+}
+.main-container main section .card-footer {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1px;
+}
+.main-container main section .card-footer button {
+  text-align: center;
+  padding: 13px 16px;
+  border: 1px solid #5b5858;
+  font-size: 18px;
+  margin-block: 10px;
+  font-weight: 300;
+}
+.main-container main section .card-footer button:hover {
+  background-color: rgba(133, 133, 133, 0.7137254902);
+  cursor: pointer;
+}
+.main-container main section .card-footer p {
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 4px;
+}
+.main-container main section .card-footer p span {
+  background-color: black;
+  padding: 1px 5px;
+  color: white;
+}
+.main-container aside {
+  grid-column: 9/span 4;
+}
+@media only screen and (max-width: 480px) {
+  .main-container aside {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .main-container aside {
+    grid-column: 1/-1;
+  }
+}
+.main-container aside section {
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1px;
+}
+.main-container aside section .aside-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.main-container aside section .aside-card-image img {
+  width: 100%;
+  height: 100%;
+}
+.main-container aside section .aside-card-body {
+  padding: 10px;
+}
+.main-container aside section .aside-card-body h2 {
+  font-weight: 400;
+}
+.main-container aside section .aside-card-body p {
+  font-weight: 300;
+  font-size: 14px;
+}
+.main-container aside section .title {
+  width: 100%;
+  background-color: #F1F1F1;
+}
+.main-container aside section .title h3 {
+  font-weight: 300;
+  padding: 10px;
+}
+.main-container aside section .post-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 5px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid #F1F1F1;
+}
+.main-container aside section .post-card .post-card-image {
+  width: 100px;
+  padding: 15px;
+  height: 100px;
+}
+.main-container aside section .post-card .post-card-image img {
+  width: 100%;
+  height: 100%;
+}
+.main-container aside section .post-card .post-card-body {
+  padding: 10px 0px;
+  height: 100%;
+}
+.main-container aside section .post-card .post-card-body h5 {
+  line-height: 3px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.main-container aside section .post-card .post-card-body p {
+  line-height: 3px;
+  font-size: 13px;
+  font-weight: 300;
+}
+.main-container aside section .post-card:hover {
+  background-color: rgba(133, 133, 133, 0.7137254902);
+  cursor: pointer;
+}
+.main-container aside section .tags-card {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 5px;
+  row-gap: 10px;
+  padding: 15px;
+}
+.main-container aside section .tags-card .tags-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1px;
+  font-weight: 200;
+  font-size: 12px;
+  background-color: #F1F1F1;
+  cursor: text;
+}
+.main-container aside section .tags-card .tags-item:nth-child(1) {
+  background-color: black;
+  color: white;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 5px;
+  background-color: #616161;
+}
+footer .buttons {
+  width: 100;
+  padding: 5px 20px;
+}
+footer .buttons button:nth-child(1) {
+  text-align: center;
+  border: none;
+  padding: 10px 15px;
+  font-weight: 300;
+  font-size: 15px;
+  background-color: #444444;
+  color: #858585;
+}
+footer .buttons button:nth-child(2) {
+  text-align: center;
+  border: none;
+  padding: 10px 10px;
+  font-weight: 300;
+  font-size: 15px;
+  background-color: #000000;
+  color: white;
+}
+footer .buttons button:nth-child(1):hover {
+  background-color: #8D8D8D;
+  cursor: no-drop;
+  color: #616161;
+}
+footer .buttons button:nth-child(2):hover {
+  background-color: #eeeeee;
+  cursor: pointer;
+  color: black;
+}
+footer h2 {
+  width: 100%;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  font-size: 15px;
+  color: white;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=index.css.map */
