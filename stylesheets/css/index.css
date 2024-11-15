@@ -78,7 +78,6 @@ textarea:not([rows]) {
 }
 
 body {
-  border: 1px solid black;
   background-color: #F1F1F1;
 }
 
